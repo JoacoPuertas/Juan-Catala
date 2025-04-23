@@ -1,0 +1,26 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
+  gap: 20px;
+}
+
+.gallery-item {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item img {
+  width: 800px;
+  height: 300px; /* altura fija */
+  object-fit: cover; /* recorta para que siempre se vea bien */
+  display: block;
+  border-radius: 8px;
+}

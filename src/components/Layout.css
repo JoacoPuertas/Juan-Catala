@@ -1,0 +1,75 @@
+/* Fondo general */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: url("../assets/background.jpg"); /* Si tenés una textura */
+  background-color: #d6d6d6; /* Fondo de respaldo similar al de la imagen */
+  background-size: cover;
+  height: 100%;
+  color: black;
+}
+
+/* Contenedor principal */
+.layout {
+  display: grid;
+  grid-template-columns: 150px 1fr 50px;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav main socials";
+  height: 100vh;
+}
+
+/* Header centrado arriba */
+.layout > :nth-child(1) {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Home: menú de navegación a la izquierda */
+.layout > :nth-child(2) {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+  gap: 10px;
+  font-size: 13px;
+}
+
+/* Contenido de la sección */
+.main-content {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Socials: iconos verticales a la derecha */
+.layout > :nth-child(4) {
+  grid-area: socials;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}

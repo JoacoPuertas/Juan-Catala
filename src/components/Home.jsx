@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
-import './Home.css';
+import { Link } from 'react-router-dom'
+import './Home.css'
 
 function Home() {
     return (
-        <div className="nav">
+        <nav className="nav">
             <Link to="/reels">REELS</Link>
-            <Link to="/">WORK</Link>
+            <Link to="/work">WORK</Link>
             <Link to="/about">ABOUT ME</Link>
             <Link to="/contact">CONTACT</Link>
-        </div>
-    );
+        </nav>
+    )
 }
 
-export default Home;
+export default Home
